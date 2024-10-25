@@ -3,11 +3,12 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 import { SidenavComponent } from "../sidenav/sidenav.component";
 import { TopnavComponent } from "../topnav/topnav.component";
+import { HttpClientModule } from '@angular/common/http';
 
 @Component({
   selector: 'app-upcoming',
   standalone: true,
-  imports: [SidenavComponent, TopnavComponent, FormsModule, ReactiveFormsModule, CommonModule],
+  imports: [SidenavComponent, TopnavComponent, FormsModule, ReactiveFormsModule, CommonModule,HttpClientModule],
   templateUrl: './upcoming.component.html',
   styleUrls: ['./upcoming.component.css']
 })

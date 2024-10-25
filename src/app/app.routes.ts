@@ -34,7 +34,6 @@ export const routes: Routes = [
     { path: 'login', component: LoginComponent },
     { path: 'header', component: HeaderloginComponent },
     
-    { path: 'pursuitmanager', component: PursuitmanagerComponent },
     { path: 'header1', component: Header1Component },
     { path: 'training', component: TrainingComponent },
     { path: 'sidenav', component: SidenavComponent },
@@ -49,8 +48,11 @@ export const routes: Routes = [
     {path:'sidebar',component:SidebarComponent},
     {path:'feedback',component:FeedbackComponent},
     {path:'view-placement',component:ViewPlacementComponent},
-    {path:'coordinatorsdashboard',component:CoordinatorsdashboardComponent},
     {path:'button',component:ButtonComponent},
+    { path: 'student-registration', component: StudentRegistrationComponent },
+  { path: 'pursuitmanager', component: PursuitmanagerComponent },
+  { path: 'training', component: TrainingComponent },
+  { path: 'coordinatorsdashboard', component: CoordinatorsdashboardComponent },
 ];
 
 @NgModule({

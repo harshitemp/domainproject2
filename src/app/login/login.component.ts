@@ -1,10 +1,10 @@
-// login.component.ts
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from '../navbar/navbar.component';
 import { HeaderloginComponent } from '../headerlogin/headerlogin.component';
-import { RouterLink } from '@angular/router';
+import { Router, RouterLink } from '@angular/router';
+import { HttpClientModule } from '@angular/common/http'; // Import HttpClientModule
 
 @Component({
   selector: 'app-login',
@@ -14,7 +14,8 @@ import { RouterLink } from '@angular/router';
     FormsModule,
     NavbarComponent, // Import other components if they are standalone
     HeaderloginComponent,
-    RouterLink
+    RouterLink,
+    HttpClientModule  // Add HttpClientModule here
   ],
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css']
@@ -23,7 +24,7 @@ export class LoginComponent {
   selectedForm: string | undefined;
   formData: any = { email: '', password: '' }; // Initialize formData
 
-  constructor() {}
+  constructor(private router: Router) {}  // Inject Router service
 
   showForm(formType: string) {
     this.selectedForm = formType;
@@ -43,6 +44,17 @@ export class LoginComponent {
 
       // Reset form fields
       this.formData = { email: '', password: '' };
+
+      // Navigate based on the selected user type
+      if (this.selectedForm === 'student') {
+        this.router.navigate(['/student-registration']);
+      } else if (this.selectedForm === 'university') {
+        this.router.navigate(['/pursuitmanager']);
+      } else if (this.selectedForm === 'company') {
+        this.router.navigate(['/training']);
+      } else if (this.selectedForm === 'coordinators') {
+        this.router.navigate(['/coordinatorsdashboard']);
+      }
     }
   }
 }
