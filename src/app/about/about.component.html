@@ -1,0 +1,53 @@
+<app-navbar></app-navbar>
+
+<br>
+<br>
+<section class="about-us" @fadeIn>
+    
+
+    <div class="content" @slideUp>
+        <h1>About Us</h1>
+        <br>
+        <h2>Helping Students <span class="highlight">succeed</span> in their <span class="highlight-green">placements</span>.</h2>
+        <p>
+          We envision a future where students are fully prepared for the challenges of the modern workforce, 
+          and recruiters can easily find the right talent for their organizations through a unified and efficient system.
+        </p>
+        <button class="signup-button"(click)="signup()">Sign Up for Free</button>
+    </div>
+    <div class="image-container" @fadeIn>
+        <img src="/assests/images/aboutus.png" alt="About Us" />
+    </div>
+</section>
+
+<section class="about-section">
+    <!-- Mission Section -->
+    <div class="section mission" @fadeIn>
+        <div class="section-image" @slideUp>
+            <img src="/assests/images/misiion.png" alt="Mission Image" />
+        </div>
+        <div class="section-text" @slideUp>
+            <h2>Mission</h2>
+            <p>The mission of a placement portal is to help manage campus placements by digitizing the process.</p>
+        </div>
+    </div>
+    <br><br>
+    <!-- Vision and Values Section -->
+    <div class="section vision-values" @fadeIn>
+        <div class="section-text" @slideUp>
+            <h2>Vision and Values</h2>
+            <p>
+              Our vision is to create a world where every student finds the right opportunity and achieves their career goals 
+              seamlessly through technology-driven placement solutions.
+            </p>
+            <p>
+              We believe in transparency, innovation, and inclusivity. Our values center around bridging the gap between students and recruiters, 
+              providing equal opportunities for all, and leveraging cutting-edge tools to simplify the placement process.
+            </p>
+        </div>
+        <br><br>
+        <div class="section-image" @slideUp>
+            <img src="/assests/images/values.png" alt="Vision and Values Image" />
+        </div>
+    </div>
+</section>

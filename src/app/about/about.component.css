@@ -1,0 +1,193 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.about-us {
+    display: flex;
+    align-items: center;
+    padding: 40px;
+    background: #f0f8ff; /* Light blue background */
+}
+
+.content {
+    max-width: 600px;
+    margin-right: 40px;
+}
+
+h2 {
+    font-size: 2rem;
+    color: #333;
+    line-height: 1.2;
+}
+
+.highlight {
+    color: #32cd32; /* LimeGreen for highlight */
+}
+
+p {
+    margin: 20px 0;
+    font-size: 1rem;
+    color: #555;
+}
+
+.signup-button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #ff4500; /* OrangeRed button color */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s ease;
+}
+
+/* Button hover effect */
+.signup-button:hover {
+    background-color: #ff6347; /* Tomato color on hover */
+    transform: scale(1.05); /* Button grows slightly on hover */
+}
+
+/* Hover effect for image container */
+.image-container img {
+    max-width: 100%;
+    border-radius: 10px;
+    animation: fadeIn 1s ease-in-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Image hover effect: zoom and shadow */
+.image-container img:hover {
+    transform: scale(1.05); /* Image zooms slightly */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Shadow effect */
+}
+
+/* Hover effect for section background color */
+.mission:hover {
+    background-color: #b2ebf2; /* Slightly darker Light Cyan on hover */
+    transition: background-color 0.3s ease;
+}
+
+.vision-values:hover {
+    background-color: #e0dab2; /* Slightly darker beige on hover */
+    transition: background-color 0.3s ease;
+}
+
+/* Fade-in animation */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Slide-up animation */
+@keyframes slideUp {
+    from {
+        transform: translateY(50px);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Apply fade-in to the whole section */
+.about-us,
+.mission,
+.vision-values {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Apply slide-up for text and image */
+.section-text,
+.section-image {
+    animation: slideUp 1s ease-in-out;
+}
+
+/* Delay image animation slightly */
+.section-image {
+    animation-delay: 0.5s;
+}
+
+.signup-button {
+    transition: transform 0.3s ease;
+}
+
+.signup-button:hover {
+    transform: scale(1.05);
+}
+
+/* Styling to keep sections neat */
+.about-us {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 40px;
+}
+
+.about-us .content {
+    max-width: 50%;
+}
+
+.about-section {
+    padding: 40px;
+}
+
+/* Colors for the mission section */
+.mission {
+    background-color: #e0f7fa; /* Light Cyan background */
+    color: #004d40; /* Dark Teal text */
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.section-image {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.section-image img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.section-text {
+    flex: 2;
+    padding-left: 20px;
+}
+
+/* Heading colors */
+.section h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.section p {
+    font-size: 1.2rem;
+    color: #666;
+    line-height: 1.6;
+}
+
+/* Colors for Vision and Values section */
+.vision-values {
+    background-color: #f5f5dc; /* Beige background */
+    color: #8b4513; /* SaddleBrown text */
+}
+
+.mission .section-text {
+    text-align: left;
+}
+
+.vision-values .section-text {
+    text-align: left;
+}
